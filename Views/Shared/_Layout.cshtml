@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"]</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#1f2732">
+
+    <meta property="og:title" content="Plorence's notepad" />
+    <meta property="og:description" content="Plorence's notepad" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://plorence.kr/" />
+    <meta property="og:image" content="http://plorence.kr/images/logo.png" />
+
+    <meta name="Keywords" content="Plorence,플로렌스" />
+    <meta name="Description" content="Plorence's notepad" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Title" content="Plorence's notepad" />
+    <meta http-equiv="Author" content="Plorence" />
+    <meta http-equiv="Publisher" content="Plorence" />
+    <meta http-equiv="Other Agent" content="Plorence" />
+    <meta http-equiv="Reply-To" content="ploseok@gmail.com" />
+    <meta http-equiv="Email" content="ploseok@gmail.com" />
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/common.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/common.min.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+    </environment>
+    <link rel="stylesheet" href="~/lib/bootstrap-4.3.1/css/bootstrap.min.css" />
+    @RenderSection("Styles", false)
+
+</head>
+<body>
+    <main>
+        @RenderBody()
+
+    </main>
+    <script src="~/lib/jquery-3.4.1/jquery.min.js"></script>
+    <script src="~/lib/popper.js/popper.min.js"></script>
+    <script src="~/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <environment names="Development">
+        <script src="~/js/gtag.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/gtag.min.js"></script>
+    </environment>
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

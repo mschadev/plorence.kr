@@ -1,0 +1,15 @@
+﻿@page
+@model plorence_kr.Pages.StatusCodeModel
+@{
+    ViewData["Title"] = "Status Code @Model.ErrorStatusCode";
+}
+<img src="http://http.cat/@Html.Raw(Model.ErrorStatusCode)" />
+<h3><a href="https://plorence.kr/">메인으로 가기</a></h3>
+
+@if (Model.ShowOriginalURL)
+{
+    <h3>블로그로 가실려는건가요?</h3>
+    <p>
+        <a href="@Html.Raw("https://blog.plorence.kr" + Model.OriginalURL)">@Html.Raw("https://blog.plorence.kr" + Model.OriginalURL)</a>
+</p>
+}

@@ -1,0 +1,54 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/index.min.css",
+    "inputFiles": [
+      "wwwroot/css/index.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/common.min.css",
+    "inputFiles": [
+      "wwwroot/css/common.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/notepad-style.min.css",
+    "inputFiles": [
+      "wwwroot/css/notepad-style.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/windows-10-loading-animation.min.css",
+    "inputFiles": [
+      "wwwroot/css/windows-10-loading-animation.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/gtag.min.js",
+    "inputFiles": [
+      "wwwroot/js/gtag.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/index.min.js",
+    "inputFiles": [
+      "wwwroot/js/index.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

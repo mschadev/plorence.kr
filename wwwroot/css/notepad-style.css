@@ -1,0 +1,63 @@
+﻿
+.mCS-notepad.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 15px;
+    transition-duration: 0.2s;
+    background-color: rgb(205, 205, 205);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.mCustomScrollBox {
+    position: absolute !important;
+    width: 100%;
+}
+
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+    margin-top: 17px !important;
+    margin-bottom: 17px !important;
+    background-color: rgb(240, 240, 240);
+}
+
+.mCS-notepad.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: rgba(0,0,0,0.0);
+}
+
+.mCS-notepad.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
+    background-color: rgb(166, 166, 166);
+}
+
+.mCSB_container {
+    margin-left: 4px;
+    margin-right: 16px !important;
+}
+
+.mCS-notepad.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-notepad.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: rgb(205, 205, 205);
+}
+
+.mCS-notepad.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -112px -73px;
+    height: 17px;
+    opacity: 1;
+    background-color: rgb(240, 240, 240);
+}
+
+.mCS-notepad.mCSB_scrollTools .mCSB_buttonUp:hover {
+        /*background-color: rgb(218, 218, 218);*/
+        cursor:default;
+    }
+
+.mCS-notepad.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -112px -93px;
+    height: 17px;
+    opacity: 1;
+    background-color: rgb(240, 240, 240);
+}
+
+    .mCS-notepad.mCSB_scrollTools .mCSB_buttonDown:hover {
+        /*background-color: rgb(218, 218, 218);*/
+        cursor: default;
+    }
+    

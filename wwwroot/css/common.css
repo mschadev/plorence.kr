@@ -1,0 +1,18 @@
+﻿.text-black {
+    color: black;
+}
+
+.text-black-hover:hover {
+    color: black;
+}
+
+.default-font-size {
+    font-size: 12px;
+}
+
+.default-cursor {
+    cursor: default;
+}
+.d-list-item {
+    display: list-item !important;
+}

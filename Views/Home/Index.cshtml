@@ -1,0 +1,131 @@
+﻿@model NotepadViewModel
+@{
+    ViewData["Title"] = "Plorence's notepad";
+}
+@section Styles{
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/index.css" />
+        <link rel="stylesheet" href="~/css/notepad-style.css" />
+        <link rel="stylesheet" href="~/css/windows-10-loading-animation.css" />
+
+    </environment>
+    <environment include="Staging,Production">
+        <link rel="stylesheet" href="~/css/index.min.css" />
+        <link rel="stylesheet" href="~/css/notepad-style.min.css" />
+        <link rel="stylesheet" href="~/css/windows-10-loading-animation.min.css" />
+    </environment>
+    <link rel="stylesheet" href="~/lib/mCustomScrollBar/jquery.mCustomScrollbar.min.css" />
+}
+<div class="loader">
+    <div class="windows-progress-bar">
+        <div class="bg"></div>
+    </div>
+    <span> 환영합니다 </span>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+<div id="wallpaper">
+    <div id="notepad">
+        <div class="container-fluid h-100 d-flex flex-column">
+            <div class="row">
+                <!-- flex 속성이 사이즈에따라 타이틀을 자동으로 가려줌 -->
+                <div class="d-inline-flex" style="flex: 1 1 0px; min-width: 0;">
+                    <img id="ico" src="~/images/notepad.ico.png" />
+                    <div class="default-font-size text-truncate" style="margin-top:5px;">
+                        <span id="title">@Model.Title - Windows 메모장</span>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item window-control-button text-center">
+                        <img src="~/images/minimize.png" />
+                    </li>
+                    <li class="nav-item window-control-button text-center">
+                        <img src="~/images/maximize.png" />
+                    </li>
+                    <li id="close-button" class="nav-item window-control-button text-center">
+                        <span style="font-size:14px;">&#x2715;</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-12 pl-0 pr-0">
+                    <ul class="nav">
+                        <li class="nav-dropdown-item text-center">
+                            <a class="default-cursor d-list-item default-font-size text-black p-0 text-decoration-none text-black-hover" href="#" role="button" id="dropdownMenuFile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">파일(F)</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuFile">
+                                <a class="text-black text-black-hover text-decoration-none" asp-controller="Home" asp-action="Download">
+                                    <div class="dropdown-menu-item">
+                                        <span class="">저장(S)</span>
+                                        <span class="float-right">Shift+S</span>
+                                    </div>
+                                </a>
+                                <hr class="mb-0 dropdown-menu-divider" />
+                                <a id="item-exit" class="text-black text-black-hover text-decoration-none" asp-controller="Home" asp-action="Download">
+                                    <div class="dropdown-menu-item">
+                                        <span class="">끝내기</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-dropdown-item text-center">
+                            <a class="default-cursor d-list-item default-font-size text-black p-0 text-decoration-none text-black-hover" href="#" role="button" id="dropdownMenuView" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">보기(V)</a>
+                            <div class="dropdown-menu" style="min-width:178px;" aria-labelledby="dropdownMenuView">
+                                <a id="item-state" class="text-black text-black-hover text-decoration-none">
+                                    <div class="dropdown-menu-item">
+                                        <span class="">상태 표시줄(S)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-dropdown-item text-center">
+                            <a class="default-cursor d-list-item default-font-size text-black p-0 text-decoration-none text-black-hover" href="#" role="button" id="dropdownMenuHelp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">도움말</a>
+                            <div class="dropdown-menu" style="min-width:178px;" aria-labelledby="dropdownMenuHelp">
+                                <a id="item-send-feedback" class="text-black text-black-hover text-decoration-none">
+                                    <div class="dropdown-menu-item">
+                                        <span class="">피드백 보내기(F)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="mb-0" style="width:100%; height:2px; margin-top:-1px; background-color:rgb(240, 240, 240); border-top:none;" />
+            </div>
+
+            <div class="row h-100">
+
+                <div id="content" class="col pl-0 pr-0">@Model.Content</div>
+            </div>
+
+            <div id="footer" class="row">
+                <div class="col">
+                </div>
+
+                <div class="default-font-size d-inline-flex footer-col pl-0 pr-0" style="flex: 1 1 0%;">
+                    <span class="footer-col-text overflow-hidden text-nowrap" style="margin-left:8px;">Windows (CRLF)</span>
+                </div>
+                <div class="default-font-size footer-col pl-0 pr-0">
+                    <span class="footer-col-text">UTF-8</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/lib/mCustomScrollBar/jquery.mCustomScrollbar.js"></script>
+    <environment names="Development">
+        <script src="~/js/index.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/index.min.js"></script>
+    </environment>
+}
+
+
