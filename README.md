@@ -14,3 +14,6 @@ __Requires Program__
 # Development Environment
 Windows 10 x64  
 ASP.net Core 2.1  
+
+# License
+[MIT](./LICENSE)
