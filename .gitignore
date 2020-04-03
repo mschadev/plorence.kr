@@ -4,6 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 #Custom
+*.img
 wwwroot/ads.txt
 wwwroot/js/gtag.js
 wwwroot/js/gtag.min.js
